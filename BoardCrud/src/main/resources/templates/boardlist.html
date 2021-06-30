@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>게시판</title>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+	<div id = "root"'>
+		<h1>Sample 화면 입니다.</h1>
+		<button  v-on:click= "read">버튼</button>
+		<ul>
+
+		</ul>
+	</div>
+
+
+	<script>
+
+
+const app = new Vue({
+	el : "#root" ,
+	data () {
+		boardlist : []
+	},
+	methos : {
+		read(){
+			axios
+			.get("http://localhost:9000/board")
+			.then()
+			console.log(response);
+		    	
+		    },
+		
+	}
+})
+</script>
+
+</body>
+</html>
